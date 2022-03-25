@@ -5,7 +5,10 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
     "gatsby": "^4.10.1",
+    "gatsby-plugin-emotion": "^7.10.0",
     "gatsby-plugin-image": "^2.10.0",
     "gatsby-plugin-offline": "^5.10.1",
     "gatsby-plugin-react-helmet": "^5.10.0",
