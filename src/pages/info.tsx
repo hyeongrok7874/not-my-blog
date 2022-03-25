@@ -26,6 +26,7 @@ const InfoPage: FunctionComponent<InfoPageProps> = ({
       <Text text={title} />
       <Text text={description} />
       <Text text={author} />
+      <a href="/">To Home</a>
     </div>
   )
 }
