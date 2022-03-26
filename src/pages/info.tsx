@@ -1,6 +1,6 @@
 import React, {FunctionComponent} from "react";
-import { graphql, Link } from "gatsby";
-import Text from "components/Text";
+import { graphql } from "gatsby";
+import { Global, css } from "@emotion/react"
 
 type InfoPageProps = {
   data : {
@@ -23,10 +23,7 @@ const InfoPage: FunctionComponent<InfoPageProps> = ({
 }) => {
   return (
     <div>
-      <Text text={title} />
-      <Text text={description} />
-      <Text text={author} />
-      <Link to="/">To Home</Link>
+      {title} {description} {author}
     </div>
   )
 }
