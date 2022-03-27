@@ -12,6 +12,12 @@ const globalStyle = css`
   }
 `
 
+const TextStyle = css`
+  font-size: 18px;
+  font-weight: 700;
+  color: gray;
+`
+
 type InfoPageProps = {
   data : {
     site : {
@@ -34,7 +40,8 @@ const InfoPage: FunctionComponent<InfoPageProps> = ({
   return (
     <div>
       <Global styles={globalStyle} />
-      {title} {description} {author}
+      <div css={TextStyle}>{title}</div>
+      {description} {author}
     </div>
   )
 }
