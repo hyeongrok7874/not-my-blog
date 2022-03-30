@@ -9,8 +9,8 @@ const POST_ITEM_DATA = {
   summary:
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident repellat doloremque fugit quis rem temporibus! Maxime molestias, suntrem debitis odit harum impedit. Modi cupiditate harum dignissimos eos in corrupti!',
   thumbnail:
-    '<https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.apple.com%2Fkr%2Fshop%2Fbuy-mac%2Fmacbook-pro%2F14%25ED%2598%2595&psig=AOvVaw3s8vwiNEjYzRxIKsQ1c0sv&ust=1648718953612000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPDTo-7C7fYCFQAAAAAdAAAAABAG>',
-  link: '<https://github.com/hyeongrok7874/>',
+    'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-spacegray-select-202110_GEO_KR?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1647363032344',
+  link: 'https://github.com/hyeongrok7874/',
 }
 
 const PostList: FunctionComponent = () => {
