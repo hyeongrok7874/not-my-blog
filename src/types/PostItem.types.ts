@@ -1,4 +1,3 @@
-import { PostFrontmatterType } from './PostItem.types';
 export type PostFrontmatterType = {
   title: string
   date: string
