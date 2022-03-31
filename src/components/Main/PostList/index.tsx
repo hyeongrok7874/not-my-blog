@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
 import PostItem from "../PostItem";
 import * as S from "./style"
+import { PostListItemType} from "types/PostItem.types"
 
 export type PostType = {
   node: {
@@ -18,7 +19,7 @@ export type PostType = {
 }
 
 type PostListProps = {
-  posts: PostType[]
+  posts: PostListItemType[]
 }
 
 const PostList: FunctionComponent<PostListProps> = ({posts}) => {
