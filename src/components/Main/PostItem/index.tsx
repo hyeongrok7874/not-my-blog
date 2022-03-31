@@ -1,16 +1,8 @@
 import React, { FunctionComponent } from "react";
+import { PostFrontmatterType } from "types/PostItem.types";
 import * as S from "./style"
 
-type PostItemProps = {
-  title: string
-  date: string
-  categories: string[]
-  summary: string
-  thumbnail: {
-    publicURL: string
-  }
-  link: string
-}
+type PostItemProps = PostFrontmatterType & { link: string }
 
 const PostItem:FunctionComponent<PostItemProps> = ({
   title,
@@ -26,7 +18,11 @@ const PostItem:FunctionComponent<PostItemProps> = ({
       <S.PostItemContent>
         <S.Title>{title}</S.Title>
         <S.Date>{date}</S.Date>
-        <S.Category>{categories}</S.Category>
+        <S.Category>
+          {categories.map(category => (
+            <S.CategoryItem key={category}>{category}</S.CategoryItem>
+          ))}
+        </S.Category>
         <S.Summary>{summary}</S.Summary>
       </S.PostItemContent>
     </S.PostItemWrapper>)
