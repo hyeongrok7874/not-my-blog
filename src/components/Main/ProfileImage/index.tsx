@@ -1,10 +1,14 @@
 import React, { FunctionComponent } from "react";
 import * as S from "./style"
+import { IGatsbyImageData } from "gatsby-plugin-image";
 
-const PROFILE_IMAGE_LINK = 'https://avatars.githubusercontent.com/u/80103328?v=4'
+type ProfileImageProps = {
+  profileImage: IGatsbyImageData
+}
 
-const ProfileImage: FunctionComponent = () => (
-  <S.ProfileImageWrapper src={PROFILE_IMAGE_LINK} alt="Profile Image" />
-)
+const ProfileImage: FunctionComponent<ProfileImageProps> = ({ profileImage }) => {
+  return <S.ProfileImageWrapper image={profileImage} alt="Profile Image" />
+}
+
 
 export default ProfileImage
