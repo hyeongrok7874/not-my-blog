@@ -9,12 +9,14 @@ const PostItem:FunctionComponent<PostItemProps> = ({
   date,
   categories,
   summary,
-  thumbnail: {publicURL},
+  thumbnail: {
+    childImageSharp: {gatsbyImageData}
+  },
   link
 }) => {
   return (
     <S.PostItemWrapper to={link}>
-      <S.ThumbnailImage src={publicURL} alt="Post Item Image" />
+      <S.ThumbnailImage image={gatsbyImageData} alt="Post Item Image" />
       <S.PostItemContent>
         <S.Title>{title}</S.Title>
         <S.Date>{date}</S.Date>
@@ -25,7 +27,8 @@ const PostItem:FunctionComponent<PostItemProps> = ({
         </S.Category>
         <S.Summary>{summary}</S.Summary>
       </S.PostItemContent>
-    </S.PostItemWrapper>)
+    </S.PostItemWrapper>
+  )
 }
 
 export default PostItem;
