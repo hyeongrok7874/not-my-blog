@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `김형록 블로그`,
+    description: `주니어 개발자로서의 저를 표현한 블로그입니다.`,
+    author: `Kim`,
+    siteUrl: 'https://github.com/hyeongrok7874',
   },
   plugins: [
     {
@@ -12,18 +13,6 @@ module.exports = {
         allExtensions: true,
       },
     },
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        defaults: {
-          formats: ['auto', 'webp'],
-          quality: 100,
-          placeholder: 'blurred',
-        },
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-image`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     {
@@ -40,8 +29,19 @@ module.exports = {
         path: `${__dirname}/static`,
       },
     },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        formats: ['auto', 'webp'],
+        quality: 100,
+        placeholder: 'blurred',
+        transformOptions: {
+          fit: 'COVER',
+        },
+      },
+    },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -64,6 +64,7 @@ module.exports = {
               maxWidth: 768,
               quality: 100,
               withWebp: true,
+              wrapperStyle: () => '',
             },
           },
           {
