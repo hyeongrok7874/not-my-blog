@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
-export const ProfileImageWrapper = styled.img`
+export const ProfileImageWrapper = styled(GatsbyImage)`
   width: 120px;
   height: 120px;
   margin-bottom: 30px;
