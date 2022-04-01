@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Link } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export const PostItemWrapper = styled(Link)`
   display: flex;
@@ -14,11 +15,10 @@ export const PostItemWrapper = styled(Link)`
   }
 `
 
-export const ThumbnailImage = styled.img`
+export const ThumbnailImage = styled(GatsbyImage)`
   width: 100%;
   height: 200px;
   border-radius: 10px 10px 0 0;
-  object-fit: cover;
 `
 
 export const PostItemContent = styled.div`
