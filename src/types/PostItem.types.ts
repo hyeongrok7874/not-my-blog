@@ -1,10 +1,14 @@
+import { IGatsbyImageData } from "gatsby-plugin-image"
+
 export type PostFrontmatterType = {
   title: string
   date: string
   categories: string[]
   summary: string
   thumbnail: {
-    publicURL: string
+    childImageSharp: {
+      gatsbyImageData: IGatsbyImageData
+    }
   }
 }
 
