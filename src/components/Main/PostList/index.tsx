@@ -10,10 +10,10 @@ type PostListProps = {
 }
 
 const PostList: FunctionComponent<PostListProps> = ({ selectedCategory, posts }) => {
-  const { containRef, postList }: useInfiniteScrollType = useInfiniteScroll(selectedCategory, posts)
+  const { containerRef, postList }: useInfiniteScrollType = useInfiniteScroll(selectedCategory, posts)
 
   return (
-    <S.PostListWrapper ref={containRef}>
+    <S.PostListWrapper ref={containerRef}>
       {postList.map(({ node: { id, frontmatter }}:PostListItemType) => (
         <PostItem {...frontmatter} link="https://www.google.co.kr/" key={id} />
       ))}
