@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useMemo } from "react";
+import React, { FunctionComponent } from "react";
 import PostItem from "../PostItem";
 import * as S from "./style"
 import { PostListItemType } from "types/PostItem.types"
@@ -14,8 +14,8 @@ const PostList: FunctionComponent<PostListProps> = ({ selectedCategory, posts })
 
   return (
     <S.PostListWrapper ref={containerRef}>
-      {postList.map(({ node: { id, frontmatter }}:PostListItemType) => (
-        <PostItem {...frontmatter} link="https://www.google.co.kr/" key={id} />
+      {postList.map(({ node: { id, fields: { slug },frontmatter }}:PostListItemType) => (
+        <PostItem {...frontmatter} link={slug} key={id} />
       ))}
     </S.PostListWrapper>
   )
