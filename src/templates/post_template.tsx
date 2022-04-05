@@ -3,6 +3,7 @@ import {graphql} from 'gatsby'
 import Template from "components/Common/Template";
 import PostHead from "components/Main/Post/PostHead";
 import { PostFrontmatterType } from "types/PostItem.types";
+import PostContent from "components/Main/Post/PostContent"
 
 type PostTemplateProps = {
   data: {
@@ -47,6 +48,7 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = ({
         categories={categories}
         thumbnail={gatsbyImageData}
       />
+      <PostContent html={html} />
     </Template>
   )
 }
