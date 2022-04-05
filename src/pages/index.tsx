@@ -25,12 +25,6 @@ type IndexPageProps = {
   }
 }
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-`
-
 const IndexPage: FunctionComponent<IndexPageProps> = ({
   location: {search},
   data: {
