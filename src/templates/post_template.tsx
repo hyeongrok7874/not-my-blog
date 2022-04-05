@@ -1,13 +1,54 @@
 import React, { FunctionComponent } from "react";
 import {graphql} from 'gatsby'
 import Template from "components/Common/Template";
+import PostHead from "components/Main/Post/PostHead";
+import { PostFrontmatterType } from "types/PostItem.types";
 
-type PostTemplateProps = {}
+type PostTemplateProps = {
+  data: {
+    allMarkdownRemark: {
+      edges: PostPageItemType[]
+    }
+  }
+}
 
-const PostTemplate: FunctionComponent<PostTemplateProps> = (props) => {
-  console.log(props)
+export type PostPageItemType = {
+  node: {
+    html: string
+    frontmatter: PostFrontmatterType
+  }
+}
 
-  return <Template>Post Template</Template>
+const PostTemplate: FunctionComponent<PostTemplateProps> = ({
+  data: {
+    allMarkdownRemark: { edges }
+  }
+}) => {
+  const {
+    node: {
+      html,
+      frontmatter: {
+        title,
+        summary,
+        date,
+        categories,
+        thumbnail: {
+          childImageSharp: { gatsbyImageData },
+        },
+      },
+    },
+  } = edges[0]
+
+  return (
+    <Template>
+      <PostHead
+        title={title}
+        date={date}
+        categories={categories}
+        thumbnail={gatsbyImageData}
+      />
+    </Template>
+  )
 }
 
 export default PostTemplate
