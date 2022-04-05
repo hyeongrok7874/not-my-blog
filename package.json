@@ -7,6 +7,9 @@
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
     "gatsby": "^4.10.1",
     "gatsby-plugin-emotion": "^7.10.0",
     "gatsby-plugin-image": "^2.11.0",
