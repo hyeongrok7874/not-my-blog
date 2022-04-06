@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `김형록 블로그`,
-    description: `주니어 개발자로서의 저를 표현한 블로그입니다.`,
+    description: `프론트엔드가 꿈인 김형록의 블로그입니다.`,
     author: `Kim`,
-    siteUrl: 'https://github.com/hyeongrok7874',
+    siteUrl: 'https://hyeongrok-blog.netlify.app',
   },
   plugins: [
     {
