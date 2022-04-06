@@ -1,9 +1,10 @@
 import React, { FunctionComponent } from "react";
 import {graphql} from 'gatsby'
 import Template from "components/Common/Template";
-import PostHead from "components/Main/Post/PostHead";
+import PostHead from "components/Post/PostHead";
 import { PostFrontmatterType } from "types/PostItem.types";
-import PostContent from "components/Main/Post/PostContent"
+import PostContent from "components/Post/PostContent"
+import CommentWidget from "components/Post/CommentWidget";
 
 type PostTemplateProps = {
   data: {
@@ -49,6 +50,7 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = ({
         thumbnail={gatsbyImageData}
       />
       <PostContent html={html} />
+      <CommentWidget />
     </Template>
   )
 }
@@ -70,6 +72,7 @@ export const queryMarkdownDataBySlug = graphql`
               childImageSharp {
                 gatsbyImageData
               }
+              publicURL
             }
           }
         }
