@@ -10,6 +10,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
+    "@types/react-helmet": "^6.1.5",
     "gatsby": "^4.10.1",
     "gatsby-plugin-emotion": "^7.10.0",
     "gatsby-plugin-image": "^2.11.0",
